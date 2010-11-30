@@ -50,6 +50,7 @@ nmap <leader>f :CommandT<CR>
 nmap <leader>l :BufExplorerHorizontalSplit<CR>
 map  <leader>r :nohlsearch <CR>
 map <leader>R :e!<CR>
+map <leader><tab> :ScratchOpen<CR>
 
 nmap Y y$
 map gb :bn<CR>
@@ -109,4 +110,5 @@ let g:CommandTMaxHeight=20
 " Use modeline overrides
 set modeline
 set modelines=10
+
 
