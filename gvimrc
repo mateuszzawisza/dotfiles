@@ -26,6 +26,7 @@ set listchars=tab:▸\ ,eol:¬
 set numberwidth=5
 set cursorline
 "set gfn=Monaco:h11
+set gfn=Menlo:h11
 set relativenumber
 autocmd BufEnter * set relativenumber
 

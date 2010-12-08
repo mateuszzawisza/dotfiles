@@ -40,3 +40,9 @@
 [submodule "bundle/vim-scratch"]
 	path = bundle/vim-scratch
 	url = git://github.com/kana/vim-scratch.git
+[submodule "bundle/bufexplorer"]
+	path = bundle/bufexplorer
+	url = git://github.com/vim-scripts/bufexplorer.zip.git
+[submodule "bundle/ReplaceWithRegister"]
+	path = bundle/ReplaceWithRegister
+	url = git://github.com/vim-scripts/ReplaceWithRegister.git

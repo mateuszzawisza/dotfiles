@@ -47,7 +47,6 @@ map <C-l> :tabnext <CR>
 
 nmap <leader>t :NERDTreeToggle<CR>
 nmap <leader>f :CommandT<CR>
-nmap <leader>l :BufExplorerHorizontalSplit<CR>
 map  <leader>r :nohlsearch <CR>
 map <leader>R :e!<CR>
 map <leader><tab> :ScratchOpen<CR>
