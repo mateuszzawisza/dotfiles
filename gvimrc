@@ -31,7 +31,7 @@ set relativenumber
 autocmd BufEnter * set relativenumber
 
 set undofile
-set transparency=5
+set transparency=0
 
 "set guioptions-=T 
 "set guioptions-=r 
@@ -40,8 +40,8 @@ set laststatus=2
 set guioptions=aAce
 
 " Command-T for CommandT
-macmenu &File.New\ Tab key=<nop>
-map <D-t> :CommandT<CR>
+"macmenu &File.New\ Tab key=<nop>
+"map <D-t> :CommandT<CR>
 
 " Command-Shift-F for Ack
 macmenu Window.Toggle\ Full\ Screen\ Mode key=<nop>
