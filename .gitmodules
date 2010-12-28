@@ -34,9 +34,6 @@
 [submodule "bundle/ack"]
 	path = bundle/ack
 	url = git://github.com/mileszs/ack.vim.git
-[submodule "bundle/vim-autoclose"]
-	path = bundle/vim-autoclose
-	url = git://github.com/Townk/vim-autoclose.git
 [submodule "bundle/vim-scratch"]
 	path = bundle/vim-scratch
 	url = git://github.com/kana/vim-scratch.git
@@ -49,3 +46,6 @@
 [submodule "bundle/vim-mac-classic-theme"]
 	path = bundle/vim-mac-classic-theme
 	url = git://github.com/nelstrom/vim-mac-classic-theme.git
+[submodule "bundle/delimitMate"]
+	path = bundle/delimitMate
+	url = git://github.com/Raimondi/delimitMate.git
