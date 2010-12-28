@@ -10,8 +10,6 @@ To update bundles
 
   cd ~/.vim
   git submodule init
-
-or 
   git submodule update
 
 
