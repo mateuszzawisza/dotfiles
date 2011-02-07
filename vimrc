@@ -14,7 +14,7 @@ set nocompatible
 set bs=2 
 
 set smartindent
-set tabstop=2 "set tab character to 4 characters
+set tabstop=2 "set tab character to 2 characters
 set expandtab "turn tabs into whitespace
 set shiftwidth=2 "indent width for autoindent
 filetype indent on "indent depends on filetype
