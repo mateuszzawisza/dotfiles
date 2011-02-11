@@ -70,10 +70,10 @@ nmap <silent> [b <Plug>unimpairedBPrevious
 nmap <silent> [A <Plug>unimpairedAFirst
 nmap <silent> [a <Plug>unimpairedAPrevious
 vmap [% [%m'gv``
-vmap \a: :Tabularize /:\zs
-nmap \a: :Tabularize /:\zs
-vmap \a= :Tabularize /=
 nmap \a= :Tabularize /=
+vmap \a= :Tabularize /=
+nmap \a: :Tabularize /:\zs
+vmap \a: :Tabularize /:\zs
 nmap \u :GundoToggle
 nmap \g :tabedit $MYGVIMRC
 snoremap \ b<BS>\
@@ -109,7 +109,7 @@ map \R :e!
 map \r :nohlsearch 
 nmap \f :CommandT
 nmap \t :NERDTreeToggle
-nmap <silent> \s :set spell!
+nmap \s :SessionList
 nmap ]xx <Plug>unimpairedLineXmlDecode
 xmap ]x <Plug>unimpairedXmlDecode
 nmap ]x <Plug>unimpairedXmlDecode
@@ -267,7 +267,7 @@ set nowritebackup
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/workspace/chef_vzaar
+cd ~/workspace/vzaar-app
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
@@ -363,7 +363,7 @@ setlocal grepprg=
 setlocal iminsert=2
 setlocal imsearch=2
 setlocal include=
-setlocal includeexpr=
+setlocal includeexpr=RailsIncludeexpr()
 setlocal indentexpr=
 setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
 setlocal noinfercase
@@ -384,7 +384,7 @@ setlocal nonumber
 set numberwidth=5
 setlocal numberwidth=5
 setlocal omnifunc=
-setlocal path=
+setlocal path=.,~/workspace/vzaar-app,~/workspace/vzaar-app/app,~/workspace/vzaar-app/app/models,~/workspace/vzaar-app/app/controllers,~/workspace/vzaar-app/app/helpers,~/workspace/vzaar-app/config,~/workspace/vzaar-app/lib,~/workspace/vzaar-app/app/views,~/workspace/vzaar-app/test,~/workspace/vzaar-app/test/unit,~/workspace/vzaar-app/test/functional,~/workspace/vzaar-app/test/integration,~/workspace/vzaar-app/spec,~/workspace/vzaar-app/spec/models,~/workspace/vzaar-app/spec/controllers,~/workspace/vzaar-app/spec/helpers,~/workspace/vzaar-app/spec/views,~/workspace/vzaar-app/spec/lib,~/workspace/vzaar-app/spec/requests,~/workspace/vzaar-app/spec/integration,~/workspace/vzaar-app/app/*,~/workspace/vzaar-app/vendor,~/workspace/vzaar-app/vendor/plugins/*/lib,~/workspace/vzaar-app/vendor/plugins/*/test,~/workspace/vzaar-app/vendor/rails/*/lib,~/workspace/vzaar-app/vendor/rails/*/test,/usr/include,
 setlocal nopreserveindent
 setlocal nopreviewwindow
 setlocal quoteescape=\\
@@ -398,20 +398,19 @@ setlocal shiftwidth=2
 setlocal noshortname
 setlocal smartindent
 setlocal softtabstop=0
-set spell
 setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en_gb
-setlocal statusline=
-setlocal suffixesadd=
+setlocal statusline=%#StatusLineNC#\ Git\ %#ErrorMsg#\ %{GitBranchInfoTokens()[0]}\ %#StatusLine#\ %F%m%r%h%w\ %y%{rails#statusline()}\ [%l,%v][%p%%]\ [%L]
+setlocal suffixesadd=.rb,.rhtml,.erb,.rxml,.builder,.rjs,.mab,.liquid,.haml,.dryml,.mn,.css,.js,.yml,.csv,.rake,.sql,.html,.xml
 setlocal noswapfile
 setlocal synmaxcol=3000
 if &syntax != ''
 setlocal syntax=
 endif
 setlocal tabstop=2
-setlocal tags=
+setlocal tags=~/workspace/vzaar-app/tmp/tags,./tags,tags,~/workspace/vzaar-app/tags
 setlocal textwidth=79
 setlocal thesaurus=
 setlocal undofile

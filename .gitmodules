@@ -55,3 +55,6 @@
 [submodule "bundle/sessionman"]
 	path = bundle/sessionman
 	url = git://github.com/vim-scripts/sessionman.vim.git
+[submodule "bundle/conque-shell"]
+	path = bundle/conque-shell
+	url = git://github.com/vim-scripts/Conque-Shell.git

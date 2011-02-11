@@ -122,6 +122,8 @@ if exists(":Tabularize")
   vmap <leader>a: :Tabularize /:\zs<CR>
 endif
 
+nmap <leader>s :SessionList<CR>
+
 
 inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
  
