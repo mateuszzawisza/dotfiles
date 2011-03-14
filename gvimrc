@@ -40,8 +40,8 @@ set laststatus=2
 set guioptions=aAce
 
 " Command-T for CommandT
-"macmenu &File.New\ Tab key=<nop>
-"map <D-t> :CommandT<CR>
+macmenu &File.New\ Tab key=<nop>
+map <D-t> :PeepOpen<CR>
 
 " Command-Shift-F for Ack
 macmenu Window.Toggle\ Full\ Screen\ Mode key=<nop>
