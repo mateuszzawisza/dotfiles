@@ -1,7 +1,9 @@
 "colorscheme twilight
 "colorscheme jellybeans
-colorscheme molokai
+"colorscheme molokai
 "colorscheme mac_classic
+"colorscheme darkspectrum
+colorscheme solarized
 
 
 " Source the vimrc file after saving it
@@ -17,6 +19,7 @@ set wrap
 set textwidth=79
 set formatoptions=qrn1
 set colorcolumn=90
+"match ErrorMsg '\%>90v.\+'
 
 set list
 set listchars=tab:▸\ ,eol:¬
@@ -25,10 +28,11 @@ set listchars=tab:▸\ ,eol:¬
 "Set line numbering to take up 5 spaces
 set numberwidth=5
 set cursorline
-"set gfn=Monaco:h11
-set gfn=Menlo:h11
+"set gfn=Monaco:h12
+set gfn=Menlo:h12
 set relativenumber
 autocmd BufEnter * set relativenumber
+autocmd BufEnter * match ErrorMsg '\%>90v.\+'
 
 set undofile
 set transparency=0
@@ -39,13 +43,9 @@ set transparency=0
 set laststatus=2
 set guioptions=aAce
 
-" Command-T for CommandT
-macmenu &File.New\ Tab key=<nop>
-map <D-t> :PeepOpen<CR>
 
 " Command-Shift-F for Ack
 macmenu Window.Toggle\ Full\ Screen\ Mode key=<nop>
 map <D-F> :Ack<space>
 
 map <D-/> <plug>NERDCommenterToggle
-

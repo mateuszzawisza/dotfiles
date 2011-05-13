@@ -19,9 +19,6 @@
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = git://github.com/tpope/vim-surround.git
-[submodule "bundle/supertab"]
-	path = bundle/supertab
-	url = git://github.com/ervandew/supertab.git
 [submodule "bundle/vim-unimpaired"]
 	path = bundle/vim-unimpaired
 	url = git://github.com/tpope/vim-unimpaired.git
@@ -52,9 +49,12 @@
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = git://github.com/godlygeek/tabular.git
-[submodule "bundle/sessionman"]
-	path = bundle/sessionman
-	url = git://github.com/vim-scripts/sessionman.vim.git
 [submodule "bundle/conque-shell"]
 	path = bundle/conque-shell
 	url = git://github.com/vim-scripts/Conque-Shell.git
+[submodule "bundle/vim-ruby-refactoring"]
+	path = bundle/vim-ruby-refactoring
+	url = git://github.com/ecomba/vim-ruby-refactoring.git
+[submodule "bundle/vim-fugitive.git"]
+	path = bundle/vim-fugitive.git
+	url = git://github.com/tpope/vim-fugitive.git

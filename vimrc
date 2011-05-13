@@ -1,7 +1,9 @@
 call pathogen#runtime_append_all_bundles() 
 call pathogen#helptags()
 
-colorscheme molokai
+"colorscheme molokai
+colorscheme solarized
+set background=dark
 
 set nu 
 syntax on
@@ -17,6 +19,8 @@ set smartindent
 set tabstop=2 "set tab character to 2 characters
 set expandtab "turn tabs into whitespace
 set shiftwidth=2 "indent width for autoindent
+set list listchars=tab:\ \ ,trail:·
+
 filetype indent on "indent depends on filetype
 
 "Shortcut to auto indent entire file
@@ -48,6 +52,7 @@ map <C-h> :tabprevious <CR>
 map <C-l> :tabnext <CR>
 
 nmap <leader>t :NERDTreeToggle<CR>
+nmap <leader>T :NERDTree<CR>
 nmap <leader>f :CommandT<CR>
 map  <leader>r :nohlsearch <CR>
 map <leader>R :e!<CR>
@@ -143,7 +148,7 @@ endfunction
 set numberwidth=5
 set cursorline
 "set gfn=Monaco:h11
-set gfn=Menlo:h11
+set gfn=Menlo:h12
 set relativenumber
 autocmd BufEnter * set relativenumber
 
