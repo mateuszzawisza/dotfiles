@@ -19,7 +19,8 @@ set smartindent
 set tabstop=2 "set tab character to 2 characters
 set expandtab "turn tabs into whitespace
 set shiftwidth=2 "indent width for autoindent
-set list listchars=tab:\ \ ,trail:·
+"set list listchars=tab:\ \ ,trail:·
+set list listchars=tab:\▸\ ,trail:·
 
 filetype indent on "indent depends on filetype
 

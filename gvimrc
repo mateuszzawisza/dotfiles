@@ -19,10 +19,10 @@ set wrap
 set textwidth=79
 set formatoptions=qrn1
 set colorcolumn=90
-"match ErrorMsg '\%>90v.\+'
+"autocmd BufEnter * match ErrorMsg '\%>90v.\+'
 
-set list
-set listchars=tab:▸\ ,eol:¬
+"set list
+"set listchars=tab:▸\ ,eol:¬
 
 
 "Set line numbering to take up 5 spaces
@@ -32,7 +32,6 @@ set cursorline
 set gfn=Menlo:h12
 set relativenumber
 autocmd BufEnter * set relativenumber
-autocmd BufEnter * match ErrorMsg '\%>90v.\+'
 
 set undofile
 set transparency=0
