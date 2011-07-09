@@ -3,7 +3,8 @@ call pathogen#helptags()
 
 "colorscheme molokai
 colorscheme solarized
-set background=dark
+"set background=dark
+set background=light
 
 set nu 
 syntax on
@@ -64,6 +65,11 @@ map gb :bn<CR>
 map gB :bp<CR>
 
 set statusline=%#StatusLineNC#\ Git\ %#ErrorMsg#\ %{GitBranchInfoTokens()[0]}\ %#StatusLine#\ %F%m%r%h%w\ %y\ [%l,%v][%p%%]\ [%L] 
+
+" adds RVM info in status line
+set statusline+=%{rvm#statusline()}
+
+
 
 
 
@@ -153,6 +159,9 @@ set gfn=Menlo:h12
 set relativenumber
 autocmd BufEnter * set relativenumber
 
+" moving up/down in wrapped lines
+nmap <C-j> gj
+nmap <C-k> gk
 
 
 
@@ -201,3 +210,6 @@ autocmd BufEnter * set relativenumber
   nnoremap <silent> sh     :FufHelp<CR>
   nnoremap <silent> se     :FufEditDataFile<CR>
   nnoremap <silent> sr     :FufRenewCache<CR>
+
+au FileType ruby setlocal comments-=:# comments+=f:#
+

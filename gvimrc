@@ -34,7 +34,7 @@ set relativenumber
 autocmd BufEnter * set relativenumber
 
 set undofile
-set transparency=0
+set transparency=5
 
 "set guioptions-=T 
 "set guioptions-=r 
@@ -48,3 +48,4 @@ macmenu Window.Toggle\ Full\ Screen\ Mode key=<nop>
 map <D-F> :Ack<space>
 
 map <D-/> <plug>NERDCommenterToggle
+
