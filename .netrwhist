@@ -1,7 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/mateuszzawisza/.vagrant'
-let g:netrw_dirhist_2='/private/etc/apache2'
-let g:netrw_dirhist_3='/Users/mateuszzawisza/Downloads/crontab'
-let g:netrw_dirhist_4='/Users/mateuszzawisza/.rvm'
-let g:netrw_dirhist_5='/Users/mateuszzawisza/.vim/bundle/sniptmate/snippets'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/Users/mateuszzawisza/workspace/chef_applicake/cookbooks/applicake_website'
+let g:netrw_dirhist_2='/Users/mateuszzawisza/workspace/chef_applicake/cookbooks'

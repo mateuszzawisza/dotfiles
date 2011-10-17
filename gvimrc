@@ -1,3 +1,4 @@
+set bg=dark
 "colorscheme twilight
 "colorscheme jellybeans
 "colorscheme molokai
@@ -18,8 +19,9 @@ nmap <leader>u :GundoToggle<CR>
 set wrap
 set textwidth=79
 set formatoptions=qrn1
-set colorcolumn=90
-"autocmd BufEnter * match ErrorMsg '\%>90v.\+'
+"set colorcolumn=90
+set list listchars=tab:\▸\ ,trail:·
+autocmd BufEnter * match ErrorMsg '\%>90v.\+'
 
 "set list
 "set listchars=tab:▸\ ,eol:¬
@@ -34,7 +36,7 @@ set relativenumber
 autocmd BufEnter * set relativenumber
 
 set undofile
-set transparency=5
+"set transparency=5
 
 "set guioptions-=T 
 "set guioptions-=r 
@@ -49,3 +51,4 @@ map <D-F> :Ack<space>
 
 map <D-/> <plug>NERDCommenterToggle
 
+map <leader>S :ConqueTermSplit rspec spec<CR>

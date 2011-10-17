@@ -1,14 +1,14 @@
 call pathogen#runtime_append_all_bundles() 
 call pathogen#helptags()
 
-"colorscheme molokai
-colorscheme solarized
-"set background=dark
-set background=light
+colorscheme molokai
+"colorscheme solarized
+set background=dark
+"set background=light
 
-set nu 
+set nu
 syntax on
-set hlsearch 
+set hlsearch
 set nobackup
 set nowritebackup
 set noswapfile
@@ -21,7 +21,6 @@ set tabstop=2 "set tab character to 2 characters
 set expandtab "turn tabs into whitespace
 set shiftwidth=2 "indent width for autoindent
 "set list listchars=tab:\ \ ,trail:·
-set list listchars=tab:\▸\ ,trail:·
 
 filetype indent on "indent depends on filetype
 
