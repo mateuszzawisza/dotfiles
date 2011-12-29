@@ -1,10 +1,11 @@
 call pathogen#runtime_append_all_bundles() 
 call pathogen#helptags()
 
-colorscheme molokai
 "colorscheme solarized
-set background=dark
+"set background=dark
 "set background=light
+colorscheme molokai
+"colorscheme Monokai
 
 set nu
 syntax on
@@ -55,6 +56,7 @@ map <C-l> :tabnext <CR>
 nmap <leader>t :NERDTreeToggle<CR>
 nmap <leader>T :NERDTree<CR>
 nmap <leader>f :CommandT<CR>
+nmap <leader>F :Ack<space>
 map  <leader>r :nohlsearch <CR>
 map <leader>R :e!<CR>
 map <leader><tab> :ScratchOpen<CR>
@@ -212,3 +214,5 @@ nmap <C-k> gk
 
 au FileType ruby setlocal comments-=:# comments+=f:#
 
+" Give vagrantfile Ruby syntax highlighting etc..
+au BufNewFile,BufRead [vV]agrantfile setf ruby

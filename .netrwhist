@@ -1,4 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/Users/mateuszzawisza/workspace/chef_applicake/cookbooks/applicake_website'
-let g:netrw_dirhist_2='/Users/mateuszzawisza/workspace/chef_applicake/cookbooks'
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/mateuszzawisza/Dropbox/vzaar/shared/as-chef-user-data'
+let g:netrw_dirhist_2='/Users/mateuszzawisza/.rvm/gems/ruby-1.9.2-p290@vd30/gems/capistrano-2.9.0/lib'
+let g:netrw_dirhist_3='/Users/mateuszzawisza/workspace/chef_dh/data_bags/config_data'
+let g:netrw_dirhist_4='/Users/mateuszzawisza/.mattzsh'
+let g:netrw_dirhist_5='/Users/mateuszzawisza/Dropbox/1Password.agilekeychain/data/default'
+let g:netrw_dirhist_6='/Users/mateuszzawisza/workspace/vzaar_app/vendor/plugins/workling/bin'
+let g:netrw_dirhist_7='/Users/mateuszzawisza/workspace/vzaar_app/vendor/plugins/workling/contrib'

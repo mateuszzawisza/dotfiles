@@ -61,3 +61,6 @@
 [submodule "bundle/rvm"]
 	path = bundle/rvm
 	url = https://github.com/csexton/rvm.vim.git
+[submodule "bundle/vim-monokai"]
+	path = bundle/vim-monokai
+	url = https://github.com/sickill/vim-monokai.git
