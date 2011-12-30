@@ -31,7 +31,7 @@ autocmd BufEnter * match ErrorMsg '\%>90v.\+'
 set numberwidth=5
 set cursorline
 "set gfn=Monaco:h12
-set gfn=Menlo:h14
+set gfn=Menlo:h12
 set relativenumber
 autocmd BufEnter * set relativenumber
 

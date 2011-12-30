@@ -1,13 +1,23 @@
-call pathogen#runtime_append_all_bundles() 
-call pathogen#helptags()
+" Vundle configuration
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+" setup Vundlefile
+source $HOME/.vim/Vundlefile
 
+"set t_Co=256
 "colorscheme solarized
-"set background=dark
-"set background=light
 colorscheme molokai
-"colorscheme Monokai
+"if !has("gui_running")
+"  set bg=light
+"  set bg=dark
+"endif 
+"colorscheme ir_black_mod
+
+"load functions
+source $HOME/.vim/functions/*.vim
 
 set nu
+map <tab><tab> :call ToggleRNU()<CR>
 syntax on
 set hlsearch
 set nobackup
@@ -55,11 +65,14 @@ map <C-l> :tabnext <CR>
 
 nmap <leader>t :NERDTreeToggle<CR>
 nmap <leader>T :NERDTree<CR>
-nmap <leader>f :CommandT<CR>
+"nmap <leader>f :CommandT<CR>
+nnoremap <leader>f :FufFile**/<CR>
+  
 nmap <leader>F :Ack<space>
 map  <leader>r :nohlsearch <CR>
 map <leader>R :e!<CR>
 map <leader><tab> :ScratchOpen<CR>
+
 
 nmap Y y$
 map gb :bn<CR>
@@ -157,8 +170,9 @@ set numberwidth=5
 set cursorline
 "set gfn=Monaco:h11
 set gfn=Menlo:h12
-set relativenumber
-autocmd BufEnter * set relativenumber
+set nu
+"set relativenumber
+"autocmd BufEnter * set relativenumber
 
 " moving up/down in wrapped lines
 nmap <C-j> gj
@@ -175,7 +189,6 @@ nmap <C-k> gk
   nnoremap <silent> sk     :FufFileWithCurrentBufferDir<CR>
   nnoremap <silent> sK     :FufFileWithFullCwd<CR>
   nnoremap <silent> s<C-k> :FufFile<CR>
-  nnoremap <silent> sl     :FufCoverageFileChange<CR>
   nnoremap <silent> sL     :FufCoverageFileChange<CR>
   nnoremap <silent> s<C-l> :FufCoverageFileRegister<CR>
   nnoremap <silent> sd     :FufDirWithCurrentBufferDir<CR>
@@ -216,3 +229,4 @@ au FileType ruby setlocal comments-=:# comments+=f:#
 
 " Give vagrantfile Ruby syntax highlighting etc..
 au BufNewFile,BufRead [vV]agrantfile setf ruby
+au BufNewFile,BufRead [vV]undlefile setf vim
