@@ -1,11 +1,4 @@
 set bg=dark
-"colorscheme twilight
-"colorscheme jellybeans
-"colorscheme molokai
-"colorscheme mac_classic
-"colorscheme darkspectrum
-"colorscheme solarized
-
 
 " Source the vimrc file after saving it
 if has("autocmd")
@@ -21,7 +14,7 @@ set textwidth=79
 set formatoptions=qrn1
 "set colorcolumn=90
 set list listchars=tab:\▸\ ,trail:·
-autocmd BufEnter * match ErrorMsg '\%>90v.\+'
+"autocmd BufEnter * match ErrorMsg '\%>90v.\+'
 
 "set list
 "set listchars=tab:▸\ ,eol:¬
@@ -32,8 +25,6 @@ set numberwidth=5
 set cursorline
 "set gfn=Monaco:h12
 set gfn=Menlo:h12
-set relativenumber
-autocmd BufEnter * set relativenumber
 
 set undofile
 "set transparency=5

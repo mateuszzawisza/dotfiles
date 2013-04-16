@@ -15,7 +15,27 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'godlygeek/tabular'
 Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'tpope/vim-fugitive'
-Bundle 'sickill/vim-monokai.git'
-Bundle 'vim-scripts/molokai'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/syntastic'
+Bundle 'sjl/gundo.vim'
+"Bundle 'chef.vim'
+Bundle 'Command-T'
+
+" colorthemes
+Bundle 'sickill/vim-monokai.git'
+Bundle 'vim-scripts/molokai'
+Bundle 'mutewinter/ir_black_mod'
+Bundle 'wgibbs/vim-irblack'
+Bundle 'tir_black'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'matchit.zip'
+Bundle 'benmills/vimux'
+Bundle 'taglist.vim'
+Bundle "https://github.com/Lokaltog/vim-powerline.git"
+
+Bundle 'nelstrom/vim-markdown-preview'
+
+
+Bundle 't9md/vim-chef'
+Bundle 'IndentAnything'
+Bundle 'git://github.com/tpope/vim-dispatch.git'

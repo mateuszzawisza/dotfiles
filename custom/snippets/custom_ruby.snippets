@@ -1,0 +1,30 @@
+# my snippets
+snippet pub
+	public
+		${1}
+	#EOF public
+snippet priv
+	private
+		${1}
+	#EOF private
+snippet prot
+	protected
+		${1}
+	#EOF protected
+snippet it
+	it "${1}" do
+	  ${2}
+	end
+snippet des
+	describe ${1} do
+		${2}
+	end
+snippet bef
+	before(:${1:all}) do
+	end
+snippet aft
+	after(:${1:all}) do
+	end
+snippet file
+	File.join(File.dirname(__FILE__),$1)
+	end

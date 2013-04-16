@@ -1,3 +1,4 @@
+" toggles between relativenumber and number
 function! ToggleRNU()
   if &rnu
     set nu
