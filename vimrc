@@ -1,13 +1,21 @@
 " Vundle configuration
 set rtp+=~/.vim/bundle/vundle/
+"set rtp+=/Users/mateuszzawisza/.powerline/powerline/bindings/vim/
+
+"call vam#ActivateAddons(['powerline'])
+
+
 call vundle#rc()
 " setup Vundlefile
 source $HOME/.vim/Vundlefile
+"source $HOME/.vim/compli.vim
 
 set shell=/usr/local/bin/zsh
 
 set background=dark
-colorscheme mustang
+"colorscheme mustang
+colorscheme Monokai
+"colorscheme Solarized
 
 "load functions
 source $HOME/.vim/functions/*.vim
@@ -73,7 +81,7 @@ map gB :bp<CR>
 "set statusline=%#StatusLineNC#\ Git\ %#ErrorMsg#\ %{GitBranchInfoTokens()[0]}\ %#StatusLine#\ %F%m%r%h%w\ %y\ [%l,%v][%p%%]\ [%L] 
 "let g:smartusline_string_to_highlight = '(%n) %f '
 "let g:Powerline_colorscheme = 'skwp'
-let g:Powerline_symbols = 'fancy'
+"let g:Powerline_symbols = 'fancy'
 
 set laststatus=2
 
@@ -112,7 +120,7 @@ set grepformat=%f:%l:%m
 
 
 " Command-T configuration
-let g:CommandTMaxHeight=20
+"let g:CommandTMaxHeight=20
 "
 "" Bubble single lines
 "nmap <C-k> [e
@@ -185,14 +193,13 @@ set ttymouse=xterm2
 set mouse=n
 
 " Leader shortcuts
-"let mapleader = "\<Space>"
 nmap <leader>n :call ToggleRNU()<CR>
 nmap <silent> <leader>s :set spell!<CR>
 nmap <leader>t :NERDTreeToggle<CR>
 nmap <leader>T :NERDTree<CR>
 "nmap <leader>f :CommandT<CR>
-nnoremap <leader>f :CommandT<CR>
-nnoremap <leader>bb :CommandTBuffer<CR>
+"nnoremap <leader>f :CommandT<CR>
+"nnoremap <leader>bb :CommandTBuffer<CR>
 nmap <leader>F :Ack<space>
 map  <leader>r :nohlsearch <CR>
 map <leader>R :e!<CR>
@@ -200,11 +207,11 @@ map <leader>R :e!<CR>
 nmap <leader>v :tabedit $MYVIMRC<CR>
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 "nnoremap <leader>q gqip
-map <leader>rp :PromptVimTmuxCommand<CR>
-map <leader>rl :RunLastVimTmuxCommand<CR>
-map <leader>ri :InspectVimTmuxRunner<CR>
-map <leader>rx :CloseVimTmuxPanes<CR>
-map <leader>rs :InterruptVimTmuxRunner<CR>
+"map <leader>rp :PromptVimTmuxCommand<CR>
+"map <leader>rl :RunLastVimTmuxCommand<CR>
+"map <leader>ri :InspectVimTmuxRunner<CR>
+"map <leader>rx :CloseVimTmuxPanes<CR>
+"map <leader>rs :InterruptVimTmuxRunner<CR>
 nmap <leader>g :g/<c-r>=expand("<cword>")<CR><CR>
 nmap <leader>G :g/<c-r>=expand("<cword>")<CR>
 nmap <leader>a :Ack <c-r>=expand("<cword>")<CR> <C-R>%<CR>
@@ -218,6 +225,7 @@ map <Leader>w :w<CR>
 map <Leader>I gg=G<c-o><c-o>
 nmap <leader>d :Dispatch zsh -ic ''<Left>
 
+map <c-x><c-m> :CtrlPMixed<CR>
 
 
 "hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
