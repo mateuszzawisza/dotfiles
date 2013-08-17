@@ -1,47 +1,46 @@
 Bundle 'gmarik/vundle'
+
 Bundle 'L9'
 Bundle 'msanders/snipmate.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-rails'
-Bundle 'taq/vim-git-branch-info'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
-Bundle 'pangloss/vim-javascript'
-Bundle 'mileszs/ack.vim'
-Bundle 'kana/vim-scratch'
-Bundle 'vim-scripts/bufexplorer.zip'
-Bundle 'Raimondi/delimitMate'
 Bundle 'godlygeek/tabular'
 Bundle 'ecomba/vim-ruby-refactoring'
-Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'scrooloose/syntastic'
-Bundle 'sjl/gundo.vim'
-"Bundle 'chef.vim'
-"Bundle 'Command-T'
+Bundle 'taglist.vim'
+Bundle 'Raimondi/delimitMate'
+Bundle 'matchit.zip'
+Bundle 'IndentAnything'
 
-" colorthemes
+" Git
+Bundle 'tpope/vim-fugitive'
+
+" File find
+Bundle 'kien/ctrlp.vim'
+Bundle 'ivalkeen/vim-ctrlp-tjump'
+
+" Search
+Bundle 'https://github.com/rking/ag.vim'
+Bundle 'mileszs/ack.vim'
+
+" Colorschemes
 Bundle 'sickill/vim-monokai.git'
 Bundle 'vim-scripts/molokai'
-Bundle 'mutewinter/ir_black_mod'
-Bundle 'wgibbs/vim-irblack'
-Bundle 'tir_black'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'matchit.zip'
-Bundle 'benmills/vimux'
-Bundle 'taglist.vim'
-"Bundle "https://github.com/Lokaltog/vim-powerline.git"
 
+" powerline
+Bundle 'bling/vim-airline'
+
+
+" Syntax
+Bundle 'Puppet-Syntax-Highlighting'
+Bundle 'pangloss/vim-javascript'
+Bundle 'jnwhiteh/vim-golang.git'
+
+" Markdown
 Bundle 'nelstrom/vim-markdown-preview'
 
-
-Bundle 'IndentAnything'
-Bundle 'git://github.com/tpope/vim-dispatch.git'
-Bundle 'jnwhiteh/vim-golang.git'
-Bundle 'Puppet-Syntax-Highlighting'
-Bundle 'neocomplcache'
-
-Bundle 'ctrlp.vim'
-Bundle 'https://github.com/rking/ag.vim'
-Bundle 'Solarized'
+Bundle 'qstrahl/vim-matchmaker'
