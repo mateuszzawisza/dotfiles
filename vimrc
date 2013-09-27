@@ -6,8 +6,10 @@ source $HOME/.vim/Vundlefile
 set shell=/usr/local/bin/zsh
 
 set background=dark
-colorscheme Monokai
-"colorscheme solarized
+"colorscheme Monokai
+"colorscheme molokai
+"colorscheme mustang
+colorscheme solarized
 
 "load functions
 source $HOME/.vim/functions/*.vim
@@ -28,8 +30,14 @@ set tabstop=2 "set tab character to 2 characters
 set expandtab "turn tabs into whitespace
 set shiftwidth=2 "indent width for autoindent
 set list listchars=tab:\ \ ,trail:·
+
+" line and column highlighting"
 hi ColorColumn ctermbg=gray
 set colorcolumn=90
+set synmaxcol=90 " vim gets very slow with long lines and syntax highlighting
+set cursorline
+hi CursorLine   cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
+"hi CursorLine cterm=bold
 
 
 "Turn on incremental search with ignore case (except explicit caps)
@@ -124,11 +132,15 @@ map <Leader>M :Matchmaker!<CR>
 
 " airline configuration
 let g:airline_powerline_fonts = 1
-let g:airline_enable_branch=1
-let g:airline_theme='dark'
+let g:airline_enable_branch=2
+"let g:airline_theme='dark'
+let g:airline_theme='solarized'
 " remove fancy chars
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline#extensions#tabline#enabled = 1
 
 " Ctrlp configuration
 let g:ctrlp_working_path_mode = 'w'

@@ -34,7 +34,6 @@ Bundle 'altercation/vim-colors-solarized'
 " powerline
 Bundle 'bling/vim-airline'
 
-
 " Syntax
 Bundle 'Puppet-Syntax-Highlighting'
 Bundle 'pangloss/vim-javascript'

@@ -24,7 +24,7 @@ set list listchars=tab:\▸\ ,trail:·
 set numberwidth=5
 set cursorline
 "set gfn=Monaco:h12
-set gfn=Menlo:h12
+set gfn=Inconsolata\ for\ Powerline:h14
 
 set undofile
 "set transparency=5
