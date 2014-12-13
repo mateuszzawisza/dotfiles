@@ -1,35 +1,31 @@
 Bundle 'gmarik/vundle'
 
 Bundle 'L9'
-Bundle 'msanders/snipmate.vim'
-Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-rails'
+Bundle 'fatih/vim-go'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'godlygeek/tabular'
-Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'taglist.vim'
 Bundle 'Raimondi/delimitMate'
 Bundle 'matchit.zip'
 Bundle 'IndentAnything'
+Bundle 'Tagbar'
 
 " Git
 Bundle 'tpope/vim-fugitive'
 
-" File find
-Bundle 'kien/ctrlp.vim'
-Bundle 'ivalkeen/vim-ctrlp-tjump'
-
 " Search
 Bundle 'https://github.com/rking/ag.vim'
-Bundle 'mileszs/ack.vim'
+"Bundle 'mileszs/ack.vim'
 
 " Colorschemes
 Bundle 'sickill/vim-monokai.git'
 Bundle 'vim-scripts/molokai'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'flazz/vim-colorschemes'
 
 " powerline
 Bundle 'bling/vim-airline'
@@ -38,8 +34,18 @@ Bundle 'bling/vim-airline'
 Bundle 'Puppet-Syntax-Highlighting'
 Bundle 'pangloss/vim-javascript'
 Bundle 'jnwhiteh/vim-golang.git'
+Bundle 'chase/vim-ansible-yaml'
+Bundle 'nginx.vim'
 
 " Markdown
 Bundle 'nelstrom/vim-markdown-preview'
 
 Bundle 'qstrahl/vim-matchmaker'
+Bundle 'UltiSnips'
+Bundle 'edkolev/tmuxline.vim'
+Bundle 'tpope/vim-vinegar'
+
+Bundle 'laurentgoudet/vim-howdoi.git'
+Bundle 'TVO--The-Vim-Outliner'
+
+"Bundle 'Valloric/YouCompleteMe'

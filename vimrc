@@ -2,14 +2,29 @@
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 source $HOME/.vim/Vundlefile
+"" if has('vim_starting')
+""   set nocompatible               " Be iMproved
+""
+""   " Required:
+""   set runtimepath+=~/.vim/bundle/neobundle.vim/
+"" endif
+
+
+"let g:netrw_liststyle = 3
+"let g:netrw_winsize = ''
+"let g:netrw_browse_split = 4
+"let g:netrw_altv = 1
+
 
 set shell=/usr/local/bin/zsh
 
-set background=dark
 "colorscheme Monokai
+set background=dark
 "colorscheme molokai
 "colorscheme mustang
-colorscheme solarized
+"colorscheme badwolf
+colorscheme tir_black
+"colorscheme solarized
 
 "load functions
 source $HOME/.vim/functions/*.vim
@@ -29,14 +44,22 @@ set smartindent
 set tabstop=2 "set tab character to 2 characters
 set expandtab "turn tabs into whitespace
 set shiftwidth=2 "indent width for autoindent
+
+syntax sync minlines=256
+
 set list listchars=tab:\ \ ,trail:·
+
+"augroup ft_python
+"  autocmd FileType python set ai sw=4 sts=4 et
+"augroup END
+
 
 " line and column highlighting"
 hi ColorColumn ctermbg=gray
-set colorcolumn=90
-set synmaxcol=90 " vim gets very slow with long lines and syntax highlighting
-set cursorline
-hi CursorLine   cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
+" set colorcolumn=90
+"set synmaxcol=90 " vim gets very slow with long lines and syntax highlighting
+"set cursorline
+"hi CursorLine   cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
 "hi CursorLine cterm=bold
 
 
@@ -51,8 +74,8 @@ set smartcase
 "Turn on spell checking with English dictionary
 set spelllang=en_gb
 
-map gb :bn<CR>
-map gB :bp<CR>
+"map gb :bn<CR>
+"map gB :bp<CR>
 
 set laststatus=2
 
@@ -106,13 +129,15 @@ nnoremap Q @q
 " Leader shortcuts
 nmap <leader>n :call ToggleRNU()<CR>
 nmap <silent> <leader>s :set spell!<CR>
-nmap <leader>t :NERDTreeToggle<CR>
-nmap <leader>T :NERDTree<CR>
+"nmap <leader>t :NERDTreeToggle<CR>
+"nmap <leader>t :Vex<CR>
+"nmap <leader>T :NERDTree<CR>
 nmap <leader>F :Ack<space>
 map  <leader>r :nohlsearch <CR>
 map <leader>R :e!<CR>
 nmap <leader>v :tabedit $MYVIMRC<CR>
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+nmap <leader>F :! open %:p:h<CR>
 
 nmap <leader>g :g/<c-r>=expand("<cword>")<CR><CR>
 nmap <leader>G :g/<c-r>=expand("<cword>")<CR>
@@ -129,18 +154,27 @@ nmap <leader>dv :vsp %:p:h<CR>
 
 map <Leader>m :Matchmaker<CR>
 map <Leader>M :Matchmaker!<CR>
+map <Leader>tt :GoTest<CR>
 
 " airline configuration
 let g:airline_powerline_fonts = 1
 let g:airline_enable_branch=2
-"let g:airline_theme='dark'
-let g:airline_theme='solarized'
+let g:airline_theme='dark'
+"let g:airline_theme='monochrome'
+"let g:airline_theme='powerlineish'
 " remove fancy chars
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_alt_sep = ''
+"let g:airline_left_sep = ''
+"let g:airline_right_sep = ''
+"let g:airline_left_alt_sep = ''
+"let g:airline_right_alt_sep = ''
 let g:airline#extensions#tabline#enabled = 1
 
 " Ctrlp configuration
 let g:ctrlp_working_path_mode = 'w'
+"Tmuxline airline
+"TmuxlineSnapshot '~/.dotfiles/tmux/theme.conf'
+
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "/Users/mateuszzawisza/.vim/snippets"]
+" :TmuxlineSnapshot ~/.dotfiles/tmux/tmuxline.conf
+"
+nmap <F8> :TagbarToggle<CR>
