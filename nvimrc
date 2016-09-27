@@ -16,19 +16,15 @@ source $HOME/.vim/Vundlefile
 "let g:netrw_altv = 1
 
 
-"set shell=/usr/local/bin/zsh
+set shell=/usr/local/bin/zsh
 
 "colorscheme Monokai
 set background=dark
-"set background=light
 "colorscheme molokai
 "colorscheme mustang
 "colorscheme badwolf
-"colorscheme tir_black
-colorscheme gruvbox
+colorscheme tir_black
 "colorscheme solarized
-"colorscheme Tomorrow-Night-Eighties
-"colorscheme molokai
 
 "load functions
 source $HOME/.vim/functions/*.vim
@@ -108,7 +104,7 @@ vmap > >gv
 vmap < <gv
 
 
-set grepprg=ack
+set grepprg=ag
 set grepformat=%f:%l:%m
 
 
@@ -124,14 +120,11 @@ au BufNewFile,BufRead Puppetfile setf ruby
 au BufNewFile,BufRead [vV]undlefile setf vim
 au BufNewFile,BufRead *.mustache setf html
 
-set ttymouse=xterm2
+"set ttymouse=xterm2
 set mouse=n
 
 " aliases
 cmap W<CR> :w<CR>
-command -nargs=1 Gpg :%w ! gpg -ear <args> | pbcopy
-command -nargs=+ Gpgm :%w ! gpg -ea <args> | pbcopy
-command -nargs=0 Pbcopy :%w ! pbcopy
 nnoremap Q @q
 " Leader shortcuts
 nmap <leader>n :call ToggleRNU()<CR>
@@ -164,20 +157,20 @@ map <Leader>M :Matchmaker!<CR>
 map <Leader>tt :GoTest<CR>
 
 " airline configuration
-let g:airline_powerline_fonts = 0
+let g:airline_powerline_fonts = 1
 let g:airline_enable_branch=2
-let g:airline_theme='tomorrow'
+let g:airline_theme='dark'
+"let g:airline_theme='monochrome'
+"let g:airline_theme='powerlineish'
 " remove fancy chars
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_alt_sep = ''
+"let g:airline_left_sep = ''
+"let g:airline_right_sep = ''
+"let g:airline_left_alt_sep = ''
+"let g:airline_right_alt_sep = ''
 let g:airline#extensions#tabline#enabled = 1
 
 " Ctrlp configuration
 let g:ctrlp_working_path_mode = 'w'
-
-let g:tmuxline_powerline_separators = 0
 "Tmuxline airline
 "TmuxlineSnapshot '~/.dotfiles/tmux/theme.conf'
 
@@ -185,16 +178,5 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", "/Users/mateuszzawisza/.vim/snip
 " :TmuxlineSnapshot ~/.dotfiles/tmux/tmuxline.conf
 "
 nmap <F8> :TagbarToggle<CR>
-
-
-"augroup BgHighlight
-"  autocmd!
-"  autocmd WinEnter * set syntax=on
-"  autocmd WinLeave * set syntax=off
-"augroup END
-"
-"
-syntax match nonascii "[^\x00-\x7F]"
-highlight nonascii guibg=Red ctermbg=2
-
+nnoremap <leader>ag  :Grepper! -tool ag  -open -switch<CR>
 
