@@ -16,6 +16,7 @@ Bundle 'Tagbar'
 
 " Git
 Bundle 'tpope/vim-fugitive'
+Bundle 'airblade/vim-gitgutter'
 
 " Search
 Bundle 'https://github.com/rking/ag.vim'
@@ -26,6 +27,7 @@ Bundle 'sickill/vim-monokai.git'
 Bundle 'vim-scripts/molokai'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'flazz/vim-colorschemes'
+Bundle 'vim-airline/vim-airline-themes'
 
 " powerline
 Bundle 'bling/vim-airline'
@@ -36,12 +38,15 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'jnwhiteh/vim-golang.git'
 Bundle 'chase/vim-ansible-yaml'
 Bundle 'nginx.vim'
+Bundle 'derekwyatt/vim-scala'
+"Bundle 'vim-syntastic/syntastic'
+Bundle 'mustache/vim-mustache-handlebars'
 
 " Markdown
 Bundle 'nelstrom/vim-markdown-preview'
 
 Bundle 'qstrahl/vim-matchmaker'
-Bundle 'UltiSnips'
+" Bundle 'UltiSnips'
 Bundle 'edkolev/tmuxline.vim'
 Bundle 'tpope/vim-vinegar'
 
@@ -49,3 +54,8 @@ Bundle 'laurentgoudet/vim-howdoi.git'
 Bundle 'TVO--The-Vim-Outliner'
 
 "Bundle 'Valloric/YouCompleteMe'
+Plugin 'bruno-/vim-man'
+
+Bundle 'mhinz/vim-grepper'
+
+Bundle 'https://github.com/rakr/vim-one'
