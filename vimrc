@@ -18,7 +18,17 @@ Plug 'hauleth/blame.vim'
 Plug 'skielbasa/vim-material-monokai'
 Plug 'felipesousa/rupza'
 Plug 'ajmwagar/vim-deus'
+Plug 'hashivim/vim-terraform'
+Plug 'vim-ruby/vim-ruby'
+Plug 'lepture/vim-jinja'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-surround'
+Plug 'w0rp/ale'
+Plug 'tpope/vim-abolish'
+Plug 'pedrohdz/vim-yaml-folds'
 call plug#end()
+
+set foldlevel=5
 
 set shell=/usr/local/bin/zsh
 set background=dark
@@ -26,6 +36,7 @@ colorscheme OceanicNext
 set termguicolors
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
+let g:python_host_prog='/usr/local/bin/python3.6'
 
 "load functions
 source $HOME/.vim/functions/*.vim
@@ -34,9 +45,9 @@ set nu
 
 syntax on
 set hlsearch
-set nobackup
-set nowritebackup
-set noswapfile
+"set nobackup
+"set nowritebackup
+"set noswapfile
 
 set nocompatible
 set bs=2
@@ -159,6 +170,8 @@ map <Leader>m :Matchmaker<CR>
 map <Leader>M :Matchmaker!<CR>
 map <Leader>tt :GoTest<CR>
 map <C-p> :FZF<CR>
+map <Leader>b :Buffers<CR>
+map <Leader>a :Ags 
 
 " airline configuration
 let g:airline_powerline_fonts = 0
@@ -180,7 +193,7 @@ let g:tmuxline_powerline_separators = 0
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "/Users/mateuszzawisza/.vim/snippets"]
 " :TmuxlineSnapshot ~/.dotfiles/tmux/tmuxline.conf
 "
-nmap <F8> :TagbarToggle<CR>
+nmap <leader>t :TagbarToggle<CR>
 
 
 "augroup BgHighlight
@@ -195,3 +208,52 @@ highlight nonascii guibg=Red ctermbg=2
 
 let g:jedi#force_py_version = 3
 
+let g:terraform_align=1
+
+command! Buffers call fzf#run(fzf#wrap({'source': map(range(1, bufnr('$')), 'bufname(v:val)')}))
+
+function! s:ag_to_qf(line)
+  let parts = split(a:line, ':')
+  return {'filename': parts[0], 'lnum': parts[1], 'col': parts[2],
+        \ 'text': join(parts[3:], ':')}
+endfunction
+
+function! s:ag_handler(lines)
+  if len(a:lines) < 2 | return | endif
+
+  let cmd = get({'ctrl-x': 'split',
+               \ 'ctrl-v': 'vertical split',
+               \ 'ctrl-t': 'tabe'}, a:lines[0], 'e')
+  let list = map(a:lines[1:], 's:ag_to_qf(v:val)')
+
+  let first = list[0]
+  execute cmd escape(first.filename, ' %#\')
+  execute first.lnum
+  execute 'normal!' first.col.'|zz'
+
+  if len(list) > 1
+    call setqflist(list)
+    copen
+    wincmd p
+  endif
+endfunction
+
+command! -nargs=* Ags call fzf#run({
+\ 'source':  printf('ag --nogroup --column --color "%s"',
+\                   escape(empty(<q-args>) ? '^(?=.)' : <q-args>, '"\')),
+\ 'sink*':    function('<sid>ag_handler'),
+\ 'options': '--ansi --expect=ctrl-t,ctrl-v,ctrl-x --delimiter : --nth 4.. '.
+\            '--multi --bind=ctrl-a:select-all,ctrl-d:deselect-all '.
+\            '--color hl:68,hl+:110',
+\ 'down':    '30%'
+\ })
+
+command! -nargs=* Agall call fzf#run({
+\ 'source':  printf('ag -f --nogroup --color "%s" /Users/mateuszzawisza/workspaces/common',
+\                   escape(empty(<q-args>) ? '^(?=.)' : <q-args>, '"\')),
+\ 'sink*':    function('<sid>ag_handler'),
+\ 'options': '--ansi --expect=ctrl-t,ctrl-v,ctrl-x --delimiter : --nth 4.. '.
+\            '--multi --bind=ctrl-a:select-all,ctrl-d:deselect-all '.
+\            '--color hl:68,hl+:110',
+\ 'down':    '30%'
+\ })
