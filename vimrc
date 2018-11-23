@@ -1,6 +1,5 @@
-call plug#begin()
+call plug#begin('~/.vim/plugged')
 Plug 'rakr/vim-one'
-Plug 'roxma/nvim-completion-manager'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'mhartington/oceanic-next'
@@ -36,7 +35,7 @@ colorscheme OceanicNext
 set termguicolors
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
-let g:python_host_prog='/usr/local/bin/python3.6'
+let g:python_host_prog='/usr/local/bin/python3.7'
 
 "load functions
 source $HOME/.vim/functions/*.vim
